@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Timer Pro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="particles"></div> <!-- Floating background elements -->
+
+    <div class="page-wrapper">
+        <header class="header">
+            <div class="stat-card">
+                <div class="stat-value" id="sessionsCount">0</div>
+                <div class="stat-label">Focus Sessions</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="totalMinutes">0</div>
+                <div class="stat-label">Total Minutes</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="streak">0</div>
+                <div class="stat-label">Daily Streak</div>
+            </div>
+        </header>
+
+        <main class="main-container">
+            <div class="timer-container">
+                <div class="time-input">
+                    <input type="number" id="minutes" placeholder="Enter minutes (1-180)" min="1" max="180">
+                </div>
+                <div class="display">00:00</div>
+                <div class="buttons">
+                    <button id="startBtn">Start</button>
+                    <button id="resetBtn">Reset</button>
+                </div>
+                <div class="status">Enter time and press Start</div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="info-card">
+                <div class="quote" id="quote">"Time is the most valuable thing a man can spend."</div>
+                <div class="author" id="author">- Theophrastus</div>
+            </div>
+            <div class="info-card">
+                <div class="tip-title">Focus Tip</div>
+                <div class="tip-content" id="tip">Break large tasks into smaller, manageable chunks for better focus.</div>
+            </div>
+            <div class="info-card">
+                <div class="tip-title">Today's Goal</div>
+                <div class="tip-content">Complete 4 focus sessions</div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Background Music -->
+    <audio id="backgroundMusic" loop>
+        <source src="start.mp3" type="audio/mpeg">
+    </audio>
+    <!-- Alert Sound -->
+    <audio id="alarmSound">
+        <source src="alert.wav" type="audio/mpeg">
+    </audio>
+
+    <!-- Pop-up Form -->
+    <div id="sessionForm" class="popup">
+        <div class="popup-content">
+            <h2>Session Notes</h2>
+            <textarea id="sessionNotes" placeholder="What did you accomplish?"></textarea>
+            <button id="submitNotes">Save</button>
+            <button id="closeForm">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
